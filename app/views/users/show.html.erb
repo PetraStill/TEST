@@ -1,6 +1,24 @@
-<%= @user.age %><br>
-<%= @user.name %><br>
-<%= @user.surname %><br>
-<%= link_to "back", :back %>
-<%= link_to "delete", user_path(@user.id), method: :delete, data: { confirm: 'Are you sure?' } %>
-<%= link_to "edit", edit_user_path(@user.id) %>
+<center>
+	<div style="width: 800px">
+		<table border="1px" width="400px">
+			<tr>
+				<td align="right" width="80px">Name:</td>
+				<td><%= @user.name %></td>
+			</tr>
+			<tr>
+				<td align="right">Surname:</td>
+				<td><%= @user.surname %></td>
+			</tr>
+			<tr>
+				<td align="right">Age:</td>
+				<td><%= @user.age %></td>
+			</tr>
+		</table>
+		<div style="float: right">
+			<%= link_to "back", :back %><br>
+			<%= link_to "delete", user_path(@user.id), method: :delete, data: { confirm: 'Are you sure?' } %><br>
+			<%= link_to "edit", edit_user_path(@user.id) %>
+		</div>
+	</div>
+</center>
+
