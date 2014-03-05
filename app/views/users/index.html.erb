@@ -1,0 +1,11 @@
+<% @users.each do |u| %>
+	<%= u.age %><br>
+	<%= u.name %><br>
+	<%= u.surname %><br>
+	<%= link_to "show", u %><br>
+<% end %>
+<br>
+
+<!-- <a href="#{new_user_path}">new</a>
+<br> -->
+<%= link_to "new", new_user_path %>

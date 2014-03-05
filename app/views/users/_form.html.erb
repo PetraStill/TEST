@@ -1,0 +1,7 @@
+<%= simple_form_for @user do |f| %>
+	<%= f.input :name %>
+	<%= f.input :surname %>
+	<%= f.input :age %>
+	<%= f.button :submit %>
+<% end %>
+<%= link_to "back", root_path %>
