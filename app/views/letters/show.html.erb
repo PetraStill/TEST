@@ -1,0 +1,20 @@
+<center>
+	<div style="width: 800px">
+		<table border="1px" width="400px">
+			<tr>
+				<td align="right" width="80px">Title:</td>
+				<td><%= @letter.titel %></td>
+			</tr>
+			<tr>
+				<td align="right">Description:</td>
+				<td><%= @letter.description %></td>
+			</tr>
+			
+		</table>
+		<div style="float: right">
+			<%= link_to "back", :back %><br>
+			<%= link_to "delete", letter_path(@letter.id), method: :delete, data: { confirm: 'Are you sure?' } %><br>
+			<%= link_to "edit", edit_letter_path(@letter.id) %>
+		</div>
+	</div>
+</center>

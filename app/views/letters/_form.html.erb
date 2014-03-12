@@ -1,0 +1,7 @@
+<%= simple_form_for @letter do |f| %>
+	<%= f.input :titel, label: "Title" %>
+	<%= f.input :user_id, collection: User.all %>
+	<%= f.input :description %>
+	<%= f.button :submit %>
+<% end %>
+<%= link_to "back", letters_path %>

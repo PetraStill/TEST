@@ -22,3 +22,26 @@
 	</div>
 </center>
 
+<br>
+<center>
+	<table border="1px">
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Description</th>
+				<th colspan="3">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @letters.each do |u| %>
+				<tr>
+					<td><%= u.titel %></td>
+					<td><%= u.description %></td>
+					<td><%= link_to "show", u %></td>
+					<td><%= link_to "edit", edit_letter_path(id: u.id) %></td>
+					<td><%= link_to "delete", letter_path(id: u.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				</tr>
+			<% end %>		
+		</tbody>
+	</table>
+</center>

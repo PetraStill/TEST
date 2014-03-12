@@ -31,6 +31,10 @@ class UsersController < ApplicationController
 		redirect_to users_path
 	end
 	
+	def show
+		@letters = Letter.where(user_id: params[:id])
+	end
+
 	private
 		def find_user
 			@user = User.find(params[:id])
